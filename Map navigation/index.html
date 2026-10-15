@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabaco City Barangay Navigator</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@2.18.0/dist/leaflet-geoman.css">
+<script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@2.18.0/dist/leaflet-geoman.min.js"></script>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside id="panel">
+  <header>
+    <h1>Tabaco City Navigator</h1>
+    <p id="modeLabel">Starting…</p>
+  </header>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search a barangay (47)" aria-label="Search a barangay" autocomplete="off">
+    <ul id="results"></ul>
+  </div>
+  <section id="info" aria-live="polite">
+    <p class="hint">Click a barangay on the map, or search for one, to see the route and the roads to take.</p>
+  </section>
+  <footer>
+    <button class="alt" id="btnSpots">★ Tourist spots</button>
+    <button class="alt" id="btnLocate">My location</button>
+    <button id="btnClear">Clear</button>
+  </footer>
+</aside>
+
+<div class="wrap"><div id="map"></div><div id="toast"></div></div>
+
+<script src="spots.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
